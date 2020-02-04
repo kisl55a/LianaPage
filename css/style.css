@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+header{
+    display: flex;
+    flex-direction: column;
+}
+.header-top {
+    width: 100%;
+    font-size: 13px;
+    background: #4c8930;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.header-top .topnav {
+    display: flex;
+    padding: 15px 130px;
+    flex-flow:  wrap;
+    flex-shrink: 1;
+    flex-direction: row;
+
+}
+
+.header__logo img{
+    max-width: 160px;
+    max-height: 50px;
+}
+
+.header-top .topnav a {
+    display: flex;
+    color: white;
+    padding-right: 22px;
+    font-size: larger;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+select {
+    text-indent: 8px;
+}
+.box {
+    display: flex;
+    border-radius: 5px;
+    height: 35px;
+    width: 177px;
+    border: 0.5px solid ; 
+    border-color: #999999a4;
+}
+.box::placeholder, .btn-success::placeholder{
+  padding: 10px 15px;
+}
+
+.header-bottom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 130px;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: center;
+    padding-left: 50px;
+}
+.links a {
+    display: flex;
+}
+.searchBar {
+    display: flex;
+    margin-left: auto;    
+}
+.searchBar form {
+    display: flex;
+    /* margin-top: auto; */
+    margin-bottom: auto;
+}
+.links a {
+    display: flex;
+    padding-right: 15px;
+    text-decoration: none;
+    color: #999999;
+}
+
+.btn-success {
+    /* display: flex; */
+    /* align-items: center; */
+    border-radius: 5px;
+    background-color: #4c8930;
+    height: 35px;
+    color: white;
+    border: 0.5px solid ; 
+    width: 75px;
+}
+
+
+@media (max-width: 720px) {
+    header {
+        flex-direction: column-reverse;
+    }
+    .header-top {
+        align-items: center;
+        flex-direction: column;
+    }
+    .header-top .topnav {
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+    }
+    .header-top .topnav a {
+       padding: 5px;
+       padding-left: auto;
+       padding-right: auto;
+    }
+    .box {
+        width: 100%;
+        padding: 10px;
+    }
+    .header-bottom {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .header-bottom .searchBar  form, .searchBar {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* .header-bottom .searchBar  {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    } */
+
+}
