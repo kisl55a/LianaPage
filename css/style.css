@@ -175,6 +175,49 @@ select {
         border: 0px solid;      
   }
   
+.contacts {
+    display: flex;
+    flex: row wrap;
+    justify-content: center;
+    padding: 50px 130px;
+    
+    /* width: 100%; */
+}
+.company {
+    background-image: url(../images/company.png);
+    margin-left: 0 !important;
+
+}
+.product {
+    background-image: url(../images/product.png);
+
+}
+.contact-us{
+    background-image: url(../images/contacts.png);
+    margin-right: 0 !important;
+
+}
+.card {
+    display: flex;
+    justify-content: center;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    height: 225px;
+    margin: 0 15px;
+    padding: 0;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+}
+.card-text {
+    display: flex;
+    margin: auto auto;
+    font-size: 30px;
+    font-weight: bold;
+}
 
 @media (max-width: 1080px) {
     #nav-expanded {
@@ -247,12 +290,42 @@ select {
     .hidden {
         display: block !important;
     }
+    .contacts {
+        flex-direction: row;
+        padding: 50px 5px;
+    }
+    .card {
+        width: 100%;
+    }
 
+}
+@media (max-width: 800px) { 
+    .contacts {
+        flex-direction: column;
+        padding: 25px 25px 
+    }
+    .card {
+        margin: 25px auto;
+    }
 }
 
 @media (max-width: 500px) {
     .links {
         padding: initial;
         flex-direction: column;
+    }
+    .card {
+        box-shadow: #999999;
+        margin: 12px 0;
+        border-radius: 0;
+        -webkit-box-shadow: 9px 9px 12px 0px rgba(50, 50, 50, 0.42);
+        -moz-box-shadow:    9px 9px 12px 0px rgba(50, 50, 50, 0.42);
+        box-shadow:         9px 9px 12px 0px rgba(50, 50, 50, 0.42);
+    }
+    .contacts {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        padding: 0;
     }
 }
