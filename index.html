@@ -26,7 +26,7 @@
         <!-- /.header-top -->
         <div class="header-bottom">
             <div class="header__logo"><img src="images/liana-logo.png" alt="">
-                <i class="material-icons burger" id="menu">
+                <i class="material-icons burger hidden" id="menu">
                     menu
                 </i>
             </div>
@@ -40,10 +40,12 @@
 
             </div>
             <!-- /.links -->
-            <select class="box hidden responsive" id='nav-expanded'>
+            <div class="hidden ">
+            <select class="box responsive " id='nav-expanded'>
                 <option>In English</option>
                 <option>In Finnish</option>
             </select>
+        </div>
             <div class="searchBar responsive" id='nav-expanded' id="myBottomNav">
                 <form>
                     <input class="box" type="text" placeholder="Search">
