@@ -14,6 +14,10 @@ a {
 li {
     list-style: none;
 }
+.active {
+    display: flex;
+}
+
 header{
     display: flex;
     flex-direction: column;
@@ -99,8 +103,6 @@ select {
 }
 
 .btn-success {
-    /* display: flex; */
-    /* align-items: center; */
     border-radius: 5px;
     background-color: #4c8930;
     height: 35px;
@@ -110,7 +112,25 @@ select {
 }
 
 
-@media (max-width: 720px) {
+@media (max-width: 1080px) {
+    .burger {
+        margin: auto 0;
+    }
+    .responsive {
+        display: none !important;
+    }
+    .header__logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .header-top {
+        display: none !important;
+    }
+    .links a {
+        padding: 5px 5px;
+    }
     header {
         flex-direction: column-reverse;
     }
@@ -128,11 +148,16 @@ select {
        padding-left: auto;
        padding-right: auto;
     }
-    .box {
+    form {
+        margin-top: 5px;
+    }
+    .topnav .box {
         width: 100%;
         padding: 10px;
+        /* margin: 5px 5px !important; */
     }
     .header-bottom {
+        background-color: #4c8930b2;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -144,11 +169,16 @@ select {
         margin-left: auto;
         margin-right: auto;
     }
-    /* .header-bottom .searchBar  {
-        display: flex;
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
+    .header-bottom .searchBar  form input[type="submit"] {
+     width: 100%;
+    }
+    /* .hidden{
+        display: inherit !important;
     } */
-
+}
+@media (max-width: 500px) { 
+    .links {
+        padding: initial;
+        flex-direction:column;
+    }
 }
