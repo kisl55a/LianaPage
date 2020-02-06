@@ -229,37 +229,90 @@ select {
 }
 
 /* Info section */
-.info{
+
+.info {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 80px;
 }
+
 .info .info-piece img {
     width: 60px;
     height: 63px;
 }
+
 .info-piece {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.info-description{
+
+.info-description {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     text-align: start;
     padding-left: 40px;
     margin-right: 75px;
 }
+
 .info-text {
     font-size: 20px;
 }
+
 .info-number {
     font-size: 50px;
     font-weight: lighter;
 }
 
-  
+.news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eceeef;
+    flex-wrap: wrap;
+    min-height: 350px;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.title {
+    display: flex;
+    margin: 50px 0;
+}
+
+.all-news {
+    display: flex;
+    padding: 0 130px;
+    justify-content: center;
+}
+
+.piece-of-news:nth-child(even) {
+    width: 100%;
+    margin: 0 30px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.piece-of-news:nth-child(odd) {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+
+.news-date {
+    padding: 25px;
+    font-size: 13px;
+}
+
+.news-text {
+    font-size: 20px;
+    padding: 0 25px 25px;
+}
+
 @media (max-width: 1024px) {
     #nav-expanded {
         transition: 2s;
@@ -342,14 +395,26 @@ select {
         margin: auto 3% 3%;
         /* padding: auto; */
     }
-    .info-description{
+    .info-description {
         display: flex;
         margin-right: 50px;
         margin-left: 40px;
         padding: 0;
         /* width: 50%; */
     }
-    
+    .all-news {
+        display: flex;
+        flex-direction: column;
+        padding: 5% 5%;
+        justify-content: center;
+    }
+    .piece-of-news{
+        margin: 2% 0 !important;
+    }
+    .title {
+        padding: 1%;
+        margin-bottom: 0 !important;
+    }
 }
 
 @media (max-width: 800px) {
@@ -360,7 +425,7 @@ select {
     .card {
         margin: 25px auto;
     }
-    .info-description{
+    .info-description {
         width: 30vh;
         display: flex;
         text-align: center;
@@ -369,7 +434,6 @@ select {
     .info-piece {
         margin: 2% 5%;
     }
-  
 }
 
 @media (max-width: 425px) {
@@ -391,13 +455,13 @@ select {
         justify-content: center;
         padding: 0;
     }
-    .info-description{
+    .info-description {
         justify-content: center;
         text-align: right;
         margin-right: 0;
     }
     .info-piece {
         display: flex;
-        margin: auto 5% 5%;    
+        margin: auto 5% 5%;
     }
 }
