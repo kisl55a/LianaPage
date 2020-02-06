@@ -7,20 +7,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.Software_fueling_digital_marketing {
-    font-size: 56px;
-    font-family: "Open Sans";
-    color: rgb(255, 255, 255);
-    line-height: 1.429;
-    text-align: center;
-    position: absolute;
-    left: 312.922px;
-    top: 374px;
-    z-index: 86;
-}
 
 a {
     text-decoration: none;
+    color: inherit
 }
 
 li {
@@ -313,6 +303,63 @@ select {
     padding: 0 25px 25px;
 }
 
+/* References section*/ 
+.references {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 130px;
+    margin-bottom: 60px;
+    /* width: 100%; */
+}
+.all-references {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.reference-piece {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 260px;
+    height: 375px;
+    width: 100%;
+    margin: 0 15px;
+    border: 1px solid #e0e0e0 ;
+    border-radius: 5px;
+}
+.reference-piece:nth-child(1) {
+    margin-left: 0px;
+}
+.reference-piece:nth-child(4) {
+    margin-right: 0;
+}
+.reference-piece img{
+    /* margin: auto auto; */
+    vertical-align: middle;
+    margin: 40px 0px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.reference-text p {
+    padding: 15px;
+}
+
+
+@media (max-width: 1380px) {
+    .reference-piece {
+        margin: 15px 15px !important;
+    }
+    .reference-piece:nth-child(1) {
+        margin: 15px 15px;
+    }
+    .reference-piece:nth-child(4) {
+        margin: 15px 15px;
+    }
+}
+
 @media (max-width: 1024px) {
     #nav-expanded {
         transition: 2s;
@@ -415,6 +462,10 @@ select {
         padding: 1%;
         margin-bottom: 0 !important;
     }
+    .references {
+        width: 100%;
+        padding: 0;
+    }
 }
 
 @media (max-width: 800px) {
@@ -434,6 +485,7 @@ select {
     .info-piece {
         margin: 2% 5%;
     }
+
 }
 
 @media (max-width: 425px) {
