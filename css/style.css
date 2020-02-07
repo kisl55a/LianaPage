@@ -6,6 +6,9 @@
 body {
     font-family: 'Open Sans', sans-serif;
 }
+body::-webkit-scrollbar {
+    /* display: none; */
+}
 
 a {
     text-decoration: none;
@@ -209,7 +212,28 @@ select {
     background-size: cover;
     background-position: top center !important;
     background-repeat: no-repeat !important;
+    transition:  1s;
+    transition-property: box-shadow;
 }
+.card:hover{
+    cursor: pointer;
+    transition: 1s;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 10px 10px 10px 10px rgba(0,0,0,0.22);
+}
+button, input[type=submit], .reference-piece{
+    transition: 1s;
+    transition-property: box-shadow;
+}
+button:hover, input[type=submit]:hover{
+    cursor: pointer;
+    color:white ;
+    background-color: #3d7025;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2); 
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2); 
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+
 
 .card-text {
     display: flex;
@@ -468,9 +492,7 @@ footer {
 }
 
 @media (max-width: 1024px) {
-    #nav-expanded {
-        transition: 2s;
-    }
+
     .burger {
         margin: auto 0;
     }
@@ -519,7 +541,6 @@ footer {
         /* margin: 5px 5px !important; */
     }
     .header-bottom {
-        transition: 1s;
         background-color: #4c89307a;
         display: flex;
         align-items: center;
@@ -626,11 +647,11 @@ footer {
     }
     .subscribe-box{
         min-width: 50px;
-        width: 50vh;
+        width: 100%;
     }
     .btn-success-subscribe {
-        width: 50vh;
-        margin: 0;
+        width: 100%;
+        margin: 10px 0;
         height: 50px;
     }
     .footer-higher {
@@ -677,10 +698,6 @@ footer {
     .info-piece {
         display: flex;
         margin: auto 5% 5%;
-    }
-    .btn-success-subscribe {
-        width: 90%;
-        margin: 0;
     }
     .subscribe-box {
         width: 100%;
