@@ -12,7 +12,7 @@ body::-webkit-scrollbar {
 
 a {
     text-decoration: none;
-    color: inherit
+    color: inherit;
 }
 
 li {
@@ -215,12 +215,12 @@ select {
     transition:  1s;
     transition-property: box-shadow;
 }
-.card:hover{
+.card:hover, .piece-of-news:hover{
     cursor: pointer;
     transition: 1s;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 10px 10px 10px 10px rgba(0,0,0,0.22);
 }
-button, input[type=submit], .reference-piece{
+button, input[type=submit], .reference-piece, .piece-of-news{
     transition: 1s;
     transition-property: box-shadow;
 }
@@ -321,9 +321,11 @@ button:hover, input[type=submit]:hover{
 .news-date {
     padding: 25px;
     font-size: 13px;
+    cursor: pointer !important; 
 }
 
 .news-text {
+    cursor: pointer !important; 
     font-size: 20px;
     padding: 0 25px 25px;
 }
