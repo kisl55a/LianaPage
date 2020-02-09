@@ -48,7 +48,7 @@ const counter = (max, id, time) => {
 const newsFeed = () => {
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     const url = "https://www.lianatech.com/resources/blog.rss"; // site that doesn’t send Access-Control-*
-    fetch(proxyurl + url) 
+    fetch(proxyurl + url)
         .then(response => response.text())
         .then(contents => {
             let xml = contents;
@@ -72,11 +72,11 @@ const newsFeed = () => {
         .catch((err) => console.log(err))
 }
 
-//Function for showing the notification
+//Functions for showing the notification
 
 let isPopShown = 0;
 const pop = () => {
-    if (isPopShown == 0 && document.querySelector('#email').value.trim() !== "" ) {
+    if (isPopShown == 0 && document.querySelector('#email').value.trim() !== "") {
         document.querySelector('.box-background').style.display = "block";
         isPopShown = 1
     } else {
@@ -85,9 +85,24 @@ const pop = () => {
     }
 }
 
-// Activation of all the needed functions 
+let newsLetterPopShown = 0
+const newsLetterPop = () => {
+    if (newsLetterPopShown == 0 && window.innerWidth > 800) {
+        setTimeout(() => {
+            document.querySelector('.notification-box').style.right = "10px";
+            newsLetterPopShown = 1
 
+        }, 4500)
+    } else {
+        document.querySelector('.notification-box').style.right = "-1010px";
+    }
+}
+
+
+// Activation of all the needed functions 
 newsFeed()
+newsLetterPop()
+
 
 
 

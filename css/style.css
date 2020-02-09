@@ -565,7 +565,22 @@ footer a:hover {
     margin-top: 10px;
     border: 0 solid;
 }
-
+.notification-box {
+    transition: 2s;
+    display: flex;
+    flex-flow: column wrap;
+    width: 30%;
+    overflow: hidden;
+    background: #f1f1f1;
+    box-shadow: 0 0 20px black;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 10px;
+    right: -1000px;
+    z-index: 9999;
+    padding: 30px;
+    text-align: center;
+}
 .box-background {
     display: flex;
     display: none;
@@ -725,7 +740,7 @@ footer a:hover {
     }
     .btn-contact {
         margin: 10px auto;
-    }
+    }  
 }
 
 @media (max-width: 800px) {
@@ -774,6 +789,9 @@ footer a:hover {
     #box {
         width: 80%;
     }
+    .notification-box {
+       display: none;
+      }
 }
 
 @media (max-width: 425px) {
