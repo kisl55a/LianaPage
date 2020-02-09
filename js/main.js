@@ -92,7 +92,7 @@ const newsLetterPop = () => {
             document.querySelector('.notification-box').style.right = "10px";
             newsLetterPopShown = 1
 
-        }, 4500)
+        }, 7000)
     } else {
         document.querySelector('.notification-box').style.right = "-1010px";
     }
