@@ -21,6 +21,7 @@ const startCounters = () => {
         counter(180, employees, 3);
         counter(3000, clients, 4);
         counter(10000, users, 5);
+        newsLetterPop()
         window.removeEventListener('scroll', startCounters);
     }
 }
@@ -92,7 +93,7 @@ const newsLetterPop = () => {
             document.querySelector('.notification-box').style.right = "10px";
             newsLetterPopShown = 1
 
-        }, 7000)
+        }, 8000)
     } else {
         document.querySelector('.notification-box').style.right = "-1010px";
     }
@@ -101,7 +102,6 @@ const newsLetterPop = () => {
 
 // Activation of all the needed functions 
 newsFeed()
-newsLetterPop()
 
 
 
