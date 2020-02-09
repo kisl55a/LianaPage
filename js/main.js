@@ -41,21 +41,22 @@ const counter = (max, id, time) => {
     }, 1000);
 }
 
+// Function for putting real news
+
 const newsFeed = () => {
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     const url = "https://www.lianatech.com/resources/blog.rss"; // site that doesn’t send Access-Control-*
-    fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
+    fetch(proxyurl + url) 
         .then(response => response.text())
         .then(contents => {
             let xml = contents;
             let xmlDoc = new DOMParser().parseFromString(xml, 'text/xml');
             for (let i = 0; i < pieceOfNews.length; i++) {
-                console.log('newsText.length: ', pieceOfNews.length);
                 let item = xmlDoc.getElementsByTagName("item")[i];
                 let description = item.getElementsByTagName("description")[0].innerHTML;
                 let link = item.getElementsByTagName("link")[0].innerHTML;
                 let date = new Date(item.getElementsByTagName("pubDate")[0].innerHTML);
-                let dateString = `${date.getDate()}.${date.getMonth()}.${date.getFullYear()}`;
+                let dateString = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
                 pieceOfNews[i].innerHTML = `
                 <a href="${link}">
                     <div class="news-date">
@@ -65,11 +66,22 @@ const newsFeed = () => {
                          ${description} 
                         </p></a>`;
             }
-    
         })
         .catch((err) => console.log(err))
 }
+
+let c = 0;
+const pop = () => {
+    if (c == 0) {
+        document.querySelector('.box-background').style.display = "block";
+        c = 1
+    } else {
+        document.querySelector('.box-background').style.display = "none";
+        c = 0
+    }
+}
 newsFeed()
+
 
 
 

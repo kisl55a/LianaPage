@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap|Open+Sans:100,200,300,400,500,700"
         rel="stylesheet">
-        <script src="https://use.fontawesome.com/6988fa9573.js"></script>
+    <script src="https://use.fontawesome.com/6988fa9573.js"></script>
 </head>
 
 <body>
@@ -107,7 +107,7 @@
         <div class="info-piece">
             <img src="images/icons/Face.png" alt="face">
             <div class="info-description">
-                <div class="info-number" id="employees" >0</div>
+                <div class="info-number" id="employees">0</div>
                 <div class="info-text">Employees</div>
             </div>
         </div>
@@ -177,33 +177,33 @@
         <!-- /.title -->
         <div class="all-references">
             <a href="#">
-            <div class="reference-piece">
-                <img src="images/bosch.png" alt="">
-                <div class="reference-text">
-                    
+                <div class="reference-piece">
+                    <img src="images/bosch.png" alt="">
+                    <div class="reference-text">
+
                         <h2>Robert Bosch</h2>
                         <p>
                             Bosch is a multinational
                             engineering and electronics company.
                         </p>
-                 
+
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
             <!-- /.references-piece -->
             <a href="#">
 
-            <div class="reference-piece">
-                <img src="images/body-shop.png" alt="">
-                <div class="reference-text">
-                    <h2>The Body Shop</h2>
-                    <p>
-                        The Body Shop is a global beauty brand and it has
-                        more than 3,000 stores in more than 60 countries.
-                    </p>
+                <div class="reference-piece">
+                    <img src="images/body-shop.png" alt="">
+                    <div class="reference-text">
+                        <h2>The Body Shop</h2>
+                        <p>
+                            The Body Shop is a global beauty brand and it has
+                            more than 3,000 stores in more than 60 countries.
+                        </p>
+                    </div>
                 </div>
-            </div>
             </a>
             <!-- /.references-piece -->
             <div class="reference-piece">
@@ -238,12 +238,12 @@
         </h1>
         <div class="subscribe-text">
             Follow our story and get the latest promotonial <br>
-             news about our products and events.
+            news about our products and events.
         </div>
         <!-- /.subscribe-text -->
-        <form>
+        <form action="javascript:void(0);">
             <input class="subscribe-box" type="text" placeholder="Your email address">
-            <input class="btn-success-subscribe" type="submit" value="Subscribe">
+            <input class="btn-success-subscribe" type="submit" onclick="pop()" value="Subscribe">
         </form>
     </section>
     <!-- /.subscribe -->
@@ -256,7 +256,7 @@
                 <a href="#">Products</a>
                 <a href="#">Contact Us</a>
                 <a href="#">News</a>
-                <a href="#">Intranet</a>                
+                <a href="#">Intranet</a>
             </div>
         </div>
         <!-- /.footer-higher -->
@@ -267,16 +267,27 @@
                     Email: sales@lianatech.com <br>
                     Phone: +358 10 387 7053
                 </div>
-            <button class="btn-contact"> Contact Us</button>
+                <a href="#"><button class="btn-contact"> Contact Us</button></a>
             </div>
             <div class="footer-social">
                 <i class="fa fa-facebook-official" aria-hidden="true"></i>
                 <i class="fa fa-twitter-square" aria-hidden="true"></i>
                 <i class="fa fa-linkedin-square" aria-hidden="true"></i>
             </div>
+            <!-- /.footer-social -->
         </div>
         <!-- /.footer-lower -->
     </footer>
+    <div class="box-background">
+        <div id="box">
+            <h1>Thank you for your subscription!</h1>
+            <button onclick="pop()" id="close">Close</button>
+            <!-- /.close -->
+        </div>
+        <!-- /#box -->
+    </div>
+    <!-- /.box-background -->
+
     <script src="js/main.js"></script>
 </body>
 

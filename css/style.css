@@ -6,6 +6,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
 }
+
 body::-webkit-scrollbar {
     /* display: none; */
 }
@@ -212,28 +213,29 @@ select {
     background-size: cover;
     background-position: top center !important;
     background-repeat: no-repeat !important;
-    transition:  1s;
-    transition-property: box-shadow;
-}
-.card:hover, .piece-of-news:hover{
-    cursor: pointer;
-    transition: 1s;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 10px 10px 10px 10px rgba(0,0,0,0.22);
-}
-button, input[type=submit], .reference-piece, .piece-of-news{
     transition: 1s;
     transition-property: box-shadow;
 }
-button:hover, input[type=submit]:hover{
+
+.card:hover, .piece-of-news:hover {
     cursor: pointer;
-    color:white ;
+    transition: 1s;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 10px 10px 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+button, input[type=submit], .reference-piece, .piece-of-news {
+    transition: 1s;
+    transition-property: box-shadow;
+}
+
+button:hover, input[type=submit]:hover {
+    cursor: pointer;
+    color: white;
     background-color: #3d7025;
-    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2); 
-    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2); 
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
     box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
-
-
 
 .card-text {
     display: flex;
@@ -321,11 +323,11 @@ button:hover, input[type=submit]:hover{
 .news-date {
     padding: 25px;
     font-size: 13px;
-    cursor: pointer !important; 
+    cursor: pointer !important;
 }
 
 .news-text {
-    cursor: pointer !important; 
+    cursor: pointer !important;
     font-size: 20px;
     padding: 0 25px 25px;
 }
@@ -395,6 +397,7 @@ hr {
     justify-content: center;
     margin-bottom: 50px;
 }
+
 .subscribe-text {
     display: flex;
 }
@@ -404,6 +407,7 @@ hr {
     flex-flow: row;
     margin-top: 35px;
 }
+
 .subscribe-box {
     display: flex;
     border-radius: 5px;
@@ -414,9 +418,11 @@ hr {
     border: 0.5px solid;
     border-color: #999999a4;
 }
+
 .subscribe-box::placeholder {
     padding: 15px 30px;
 }
+
 .btn-success-subscribe {
     border-radius: 5px;
     background-color: #4c8930;
@@ -437,6 +443,7 @@ footer {
     padding-bottom: 70px;
     color: white;
 }
+
 .footer-higher {
     display: flex;
     flex-flow: row wrap;
@@ -446,9 +453,10 @@ footer {
     padding-top: 55px;
 }
 
-.footer-links a{
+.footer-links a {
     margin: 20px;
 }
+
 .footer-links {
     margin-right: -20px;
 }
@@ -461,10 +469,12 @@ footer {
     padding: 0 130px;
     padding-top: 55px;
 }
+
 .footer-info {
     display: flex;
     flex-flow: row wrap;
 }
+
 .btn-contact {
     text-align: center;
     margin-top: auto;
@@ -476,10 +486,66 @@ footer {
     background-color: #4c8930;
     color: white;
 }
+
 .footer-social {
     margin-top: auto;
 }
 
+#box {
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+    overflow: hidden;
+    background: #f1f1f1;
+    box-shadow: 0 0 20px black;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 30px;
+    text-align: center;
+}
+
+#box span {
+    color: #2ecc71;
+    font-size: 40px;
+    display: block;
+    margin: 20px 0;
+}
+
+#box h1 {
+    color: #333;
+}
+
+#close {
+    margin: auto;
+    width: 30%;
+    font-size: 20px;
+    color: white;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: #4c8930;
+    display: inline-block;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 0 solid;
+}
+
+.box-background {
+    display: flex;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.5));
+    background-attachment: fixed;
+    background-position: center;
+    z-index: 100;
+}
 
 @media (max-width: 1380px) {
     .reference-piece {
@@ -494,7 +560,6 @@ footer {
 }
 
 @media (max-width: 1024px) {
-
     .burger {
         margin: auto 0;
     }
@@ -601,7 +666,7 @@ footer {
         height: 35px;
         border: 0 solid;
     }
-    .footer-higher h3{
+    .footer-higher h3 {
         margin: auto auto;
     }
     .footer-links {
@@ -613,7 +678,6 @@ footer {
         justify-content: space-between;
         align-items: center;
         padding: 0;
-
     }
     .footer-info {
         text-align: center;
@@ -647,7 +711,7 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-    .subscribe-box{
+    .subscribe-box {
         min-width: 50px;
         width: 100%;
     }
@@ -666,7 +730,12 @@ footer {
         display: flex;
         flex-direction: column;
     }
-
+    #close {
+        width: 80%;
+    }
+    #box {
+        width: 80%;
+    }
 }
 
 @media (max-width: 425px) {
