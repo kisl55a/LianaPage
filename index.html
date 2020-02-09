@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Liana Technologies</title>
+    <link rel="icon" href="images/iconBrowser.jpg">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap|Open+Sans:100,200,300,400,500,700"
@@ -17,8 +18,8 @@
     <header class="active">
         <div class="header-top">
             <div class="topnav" id="myTopnav">
-                <a href="#">News</a>
-                <a href="#">Intranet</a>
+                <a href="#news">News</a>
+                <a href="https://www.lianatech.com/">Intranet</a>
                 <select class="box">
                     <option>In English</option>
                     <option>In Finnish</option>
@@ -28,19 +29,19 @@
         <!-- /.header-top -->
 
         <div class="header-bottom">
-            <div class="header__logo"><img src="images/liana-logo.png" alt="">
+            <div class="header-logo"><img src="images/liana-logo.png" alt="">
                 <i class="material-icons burger hidden" id="menu">
                     menu
                 </i>
             </div>
-            <div class="links responsive" id='nav-expanded'>
-                <a href="#">Company</a>
-                <a href="#">Products</a>
-                <a href="#">Contact Us</a>
-                <a href="#" class="hidden">News</a>
-                <a href="#" class="hidden">Intranet</a>
+            <div class="header-links responsive" id='nav-expanded'>
+                <a href="https://www.lianatech.com/">Company</a>
+                <a href="https://www.lianatech.com/">Products</a>
+                <a href="https://www.lianatech.com/">Contact Us</a>
+                <a href="#news" class="hidden">News</a>
+                <a href="https://www.lianatech.com/" class="hidden">Intranet</a>
             </div>
-            <!-- /.links -->
+            <!-- /.header-links -->
             <div class="hidden ">
                 <select class="box responsive " id='nav-expanded'>
                     <option>In English</option>
@@ -49,7 +50,7 @@
             </div>
             <div class="search-bar responsive" id='nav-expanded' id="myBottomNav">
                 <form>
-                    <input class="box" type="text" placeholder="Search">
+                    <input class="box1" type="text" placeholder="Search">
                     <input class="btn-success" type="submit" value="Search">
                 </form>
             </div>
@@ -65,7 +66,7 @@
                 Software fueling digital marketing
             </div>
             <!-- /.statement -->
-            <button class="main-text-button">Learn more</button>
+            <a href="https://www.lianatech.com/"><button class="main-text-button">Learn more</button></a>
         </div>
         <!-- /.main-text -->
     </section>
@@ -74,28 +75,35 @@
 
     <section class="contacts">
         <div class="company card">
-            <div class="card-text">
-                Company
-            </div>
+            <a href="https://www.lianatech.com/">
+                <div class="card-text">
+                    Company
+                </div>
+            </a>
         </div>
         <!-- /.company -->
         <div class="product card">
-            <div class="card-text">
-                Products
-            </div>
+            <a href="https://www.lianatech.com/">
+
+                <div class="card-text">
+                    Products
+                </div>
+            </a>
         </div>
         <!-- /.product -->
         <div class="contact-us card">
-            <div class="card-text">
-                Contact Us
-            </div>
+            <a href="https://www.lianatech.com/">
+                <div class="card-text">
+                    Contact Us
+                </div>
+            </a>
         </div>
         <!-- /.contact-us -->
     </section>
     <!-- /.contacts -->
 
 
-    <section class="info" onscroll="myScript()">
+    <section class="info">
         <div class="info-piece">
             <img src="images/icons/Business.png" alt="Business">
             <div class="info-description">
@@ -124,7 +132,7 @@
     <!-- /.info -->
 
 
-    <section class="news">
+    <section class="news" id="news">
         <h1 class="title">
             Latest news
         </h1>
@@ -138,8 +146,8 @@
                     Lorem ipsum dolor, sit amet consectetur
                     adipisicing elit. Voluptas ab quo optio!
                 </p>
-
             </div>
+            <!-- /.piece-of-news -->
             <div class="piece-of-news">
                 <div class="news-date">
                     03.02.2019
@@ -150,8 +158,8 @@
                     fuga earum blanditiis aspernatur reprehenderit
                     quo repellendus qui. Voluptas.
                 </p>
-
             </div>
+            <!-- /.piece-of-news -->
             <div class="piece-of-news">
                 <div class="news-date">
                     05.06.2019
@@ -162,8 +170,8 @@
                     fuga earum blanditiis aspernatur reprehenderit
                     quo repellendus qui. Voluptas.
                 </p>
-
             </div>
+            <!-- /.piece-of-news -->
         </div>
         <!-- /.all-news -->
     </section>
@@ -176,7 +184,7 @@
         </h1>
         <!-- /.title -->
         <div class="all-references">
-            <a href="#">
+            <a href="https://www.bosch.com/">
                 <div class="reference-piece">
                     <img src="images/bosch.png" alt="">
                     <div class="reference-text">
@@ -192,8 +200,7 @@
             </a>
 
             <!-- /.references-piece -->
-            <a href="#">
-
+            <a href="http://bodyshop.com/">
                 <div class="reference-piece">
                     <img src="images/body-shop.png" alt="">
                     <div class="reference-text">
@@ -206,31 +213,37 @@
                 </div>
             </a>
             <!-- /.references-piece -->
-            <div class="reference-piece">
-                <img src="images/lapland.png" alt="">
-                <div class="reference-text">
-                    <h2>Lapland hotels</h2>
-                    <p>
-                        Lapland Hotels is the largest
-                        and the most diverse hotel chain in Lapland.
-                    </p>
+            <a href="https://www.laplandhotels.com/EN/">
+                <div class="reference-piece">
+                    <img src="images/lapland.png" alt="">
+                    <div class="reference-text">
+                        <h2>Lapland hotels</h2>
+                        <p>
+                            Lapland Hotels is the largest
+                            and the most diverse hotel chain in Lapland.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div href="#" class="reference-piece">
-                <img src="images/ikea.png" alt="">
-                <div class="reference-text">
-                    <h2>IKEA</h2>
-                    <p>
-                        IKEA is a multinational furniture store.
-                    </p>
-                </div>
-                <!-- /.references-piece -->
-            </div>
-            <!-- /.all-references -->
+            </a>
+            <!-- /.references-piece -->
+            <a href="https://www.ikea.com/">
+                <div class="reference-piece">
+                    <img src="images/ikea.png" alt="">
+                    <div class="reference-text">
+                        <h2>IKEA</h2>
+                        <p>
+                            IKEA is a multinational furniture store.
+                        </p>
+                    </div>
+            </a>
+            <!-- /.references-piece -->
+        </div>
+        <!-- /.all-references -->
         </div>
     </section>
     <hr>
     <!-- /.references -->
+
 
     <section class="subscribe">
         <h1 class="title">
@@ -248,26 +261,27 @@
     </section>
     <!-- /.subscribe -->
 
+
     <footer>
         <div class="footer-higher">
             <h3>Liana Technologies</h3>
             <div class="footer-links">
-                <a href="#">Company</a>
-                <a href="#">Products</a>
-                <a href="#">Contact Us</a>
-                <a href="#">News</a>
-                <a href="#">Intranet</a>
+                <a href="https://www.lianatech.com/">Company</a>
+                <a href="https://www.lianatech.com/">Products</a>
+                <a href="https://www.lianatech.com/">Contact Us</a>
+                <a href="https://www.lianatech.com/">News</a>
+                <a href="https://www.lianatech.com/">Intranet</a>
             </div>
         </div>
         <!-- /.footer-higher -->
         <div class="footer-lower">
             <div class="footer-info">
-                <div>
+                <div class="footer-sales">
                     <b>Sales and inquiries</b><br>
                     Email: sales@lianatech.com <br>
                     Phone: +358 10 387 7053
                 </div>
-                <a href="#"><button class="btn-contact"> Contact Us</button></a>
+                <a href="https://www.lianatech.com/"><button class="btn-contact"> Contact Us</button></a>
             </div>
             <div class="footer-social">
                 <i class="fa fa-facebook-official" aria-hidden="true"></i>

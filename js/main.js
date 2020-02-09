@@ -14,9 +14,9 @@ menu.onclick = () => {
 
 const startCounters = () => {
     if (window.pageYOffset + this.window.innerHeight > 900) {
-        counter(180, employees, 4);
-        counter(3000, clients, 5);
-        counter(10000, users, 6);
+        counter(180, employees, 3);
+        counter(3000, clients, 4);
+        counter(10000, users, 5);
         window.removeEventListener('scroll', startCounters);
     }
 }
