@@ -1,9 +1,11 @@
 const clients = document.querySelector('#clients');
 const employees = document.querySelector('#employees');
 const users = document.querySelector('#users')
-const pieceOfNews = document.querySelectorAll('.piece-of-news')
+const pieceOfNews = document.querySelectorAll('.news-piece')
 const newsDate = document.querySelectorAll('.news-date')
 let news = undefined;
+
+// Navbar expantion
 
 menu.onclick = () => {
     let x = document.querySelectorAll('#nav-expanded')
@@ -11,6 +13,8 @@ menu.onclick = () => {
         element.classList.toggle('responsive')
     });
 }
+
+//  Counter for numbers of clients/users/employees
 
 const startCounters = () => {
     if (window.pageYOffset + this.window.innerHeight > 900) {
@@ -22,8 +26,6 @@ const startCounters = () => {
 }
 
 window.addEventListener('scroll', startCounters);
-
-//  Counter for numbers of clients/users/employees
 
 const counter = (max, id, time) => {
     let current = 0;
@@ -70,16 +72,21 @@ const newsFeed = () => {
         .catch((err) => console.log(err))
 }
 
-let c = 0;
+//Function for showing the notification
+
+let isPopShown = 0;
 const pop = () => {
-    if (c == 0) {
+    if (isPopShown == 0 && document.querySelector('#email').value.trim() !== "" ) {
         document.querySelector('.box-background').style.display = "block";
-        c = 1
+        isPopShown = 1
     } else {
         document.querySelector('.box-background').style.display = "none";
-        c = 0
+        isPopShown = 0
     }
 }
+
+// Activation of all the needed functions 
+
 newsFeed()
 
 

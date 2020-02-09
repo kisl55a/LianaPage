@@ -1,17 +1,19 @@
 * {
     margin: 0;
-    padding: 0; 
+    padding: 0;
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
 }
+
 a {
     text-decoration: none;
     color: inherit;
 }
-a:hover {
+
+a:hover, {
     cursor: pointer;
 }
 
@@ -33,8 +35,13 @@ header {
     display: flex;
     flex-direction: column;
 }
+
 header a:hover {
     color: rgb(0, 0, 0);
+}
+
+.topnav a:hover {
+    color: rgba(54, 71, 56, 0.884) !important
 }
 
 .header-top {
@@ -79,7 +86,8 @@ select {
     border: 0.5px solid;
     border-color: #999999a4;
 }
-.box1 {
+
+.search-box {
     display: flex;
     border-radius: 5px;
     height: 30px;
@@ -121,7 +129,6 @@ select {
 
 .search-bar form {
     display: flex;
-    /* margin-top: auto; */
     margin-bottom: auto;
 }
 
@@ -150,7 +157,6 @@ select {
     flex-direction: column;
     height: 420px;
     justify-content: center;
-    /* justify-items: center; */
     -moz-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover;
@@ -170,17 +176,19 @@ select {
     font-size: 52px;
     text-align: center;
 }
+
 .main-text a {
     display: flex;
     flex-direction: column;
 }
 
-
 .main-text-button {
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
     font-size: 16px;
     margin-top: 30px;
-    /* padding: -5px; */
+    text-align: center;
     color: white;
     border-radius: 5px;
     background-color: rgb(76, 137, 48);
@@ -198,10 +206,10 @@ select {
     flex: row wrap;
     justify-content: center;
     padding: 50px 130px;
-    /* width: 100%; */
 }
-.contacts a{
-  display: flex;
+
+.contacts a {
+    display: flex;
 }
 
 .company {
@@ -236,18 +244,18 @@ select {
     transition-property: box-shadow;
 }
 
-.card:hover, .piece-of-news:hover, .reference-piece:hover {
+.card:hover, .news-piece:hover, .reference-piece:hover {
     cursor: pointer;
     transition: 1s;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 7px 7px 7px 7px rgba(0, 0, 0, 0.22);
 }
 
-button, input[type=submit], .reference-piece, .piece-of-news {
+button, input[type=submit], .reference-piece, .news-piece {
     transition: 1s;
     transition-property: box-shadow;
 }
 
-button:hover, input[type=submit]:hover {
+button:hover, .main-text-button:hover, input[type=submit]:hover {
     cursor: pointer;
     color: white;
     background-color: #3d7025;
@@ -326,14 +334,14 @@ button:hover, input[type=submit]:hover {
     justify-content: center;
 }
 
-.piece-of-news:nth-child(even) {
+.news-piece:nth-child(even) {
     width: 100%;
     margin: 0 30px;
     background-color: #fff;
     border-radius: 5px;
 }
 
-.piece-of-news:nth-child(odd) {
+.news-piece:nth-child(odd) {
     width: 100%;
     background-color: #fff;
     border-radius: 5px;
@@ -360,7 +368,6 @@ button:hover, input[type=submit]:hover {
     align-items: center;
     padding: 0 130px;
     margin-bottom: 60px;
-    /* width: 100%; */
 }
 
 .all-references {
@@ -439,7 +446,6 @@ hr {
     border-color: #999999a4;
 }
 
-
 .btn-success-subscribe {
     border-radius: 5px;
     background-color: #4c8930;
@@ -460,6 +466,7 @@ footer {
     padding-bottom: 70px;
     color: white;
 }
+
 footer a:hover {
     color: rgba(255, 255, 255, 0.733);
 }
@@ -494,9 +501,11 @@ footer a:hover {
     display: flex;
     flex-flow: row wrap;
 }
+
 .footer-info a {
     margin-top: auto;
 }
+
 .btn-contact {
     text-align: center;
     margin-top: auto;
@@ -512,6 +521,8 @@ footer a:hover {
 .footer-social {
     margin-top: auto;
 }
+
+/* Pop-up section  */
 
 #box {
     display: flex;
@@ -568,6 +579,8 @@ footer a:hover {
     background-position: center;
     z-index: 100;
 }
+
+/* Media queries, they have the same order as in main part */
 
 @media (max-width: 1380px) {
     .reference-piece {
@@ -627,11 +640,9 @@ footer a:hover {
     .topnav .box {
         width: 100%;
         padding: 10px;
-        /* margin: 5px 5px !important; */
     }
-    .box1 {
+    .search-box {
         margin-bottom: 5px;
-        /* margin: 5px 5px !important; */
     }
     .header-bottom {
         background-color: #4c89307a;
@@ -661,14 +672,12 @@ footer a:hover {
     }
     .info-piece {
         margin: auto 3% 3%;
-        /* padding: auto; */
     }
     .info-description {
         display: flex;
         margin-right: 50px;
         margin-left: 40px;
         padding: 0;
-        /* width: 50%; */
     }
     .all-news {
         display: flex;
@@ -676,7 +685,7 @@ footer a:hover {
         padding: 5% 5%;
         justify-content: center;
     }
-    .piece-of-news {
+    .news-piece {
         margin: 2% 0 !important;
     }
     .title {
@@ -793,7 +802,6 @@ footer a:hover {
         justify-content: center;
         width: 20vh;
         text-align: center;
-        /* padding-right: 20px; */
     }
     .info-piece {
         display: flex;
